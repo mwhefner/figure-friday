@@ -382,6 +382,7 @@ def display_click_data(clickData, n_close, is_open, currencyRadios):
                     dbc.CardHeader("Details"),
                     dbc.CardBody([
                         html.P(f"Rank: {filtered_data['Rank']}"),
+                        html.P(f"Price: {format_price(filtered_data['Price_' + currencyRadios], currencyRadios)}"),
                         html.P(f"Current Players: {filtered_data['Current Players']}"),
                         html.P(f"Peak Today: {filtered_data['Peak Today']}"),
                         html.P(f"Genre Tags: {filtered_data['Genre Tags']}"),
