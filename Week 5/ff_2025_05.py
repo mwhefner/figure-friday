@@ -160,7 +160,7 @@ def create_sunburst(unitRadios, tagsLayers, currencyRadios, priceSlider):
             " Peak Today.<br>" for price, current_players, peak_today in zip(df_filtered["Price_" + currencyRadios], df_filtered["Current Players"], df_filtered["Peak Today"])
         ] + ["" for i in range(len(sunburst) - len(df_filtered))]
     
-    sunburst['colors'] = ["#000000" if i % 2 == 0 else "#FFFFFF" for i in range(len(df_filtered))] + ["#000000" if i % 2 == 0 else "#FFFFFF" for i in range(len(sunburst) - len(df_filtered))]
+    sunburst['colors'] = ["#000" if i % 2 == 0 else "#FFF" for i in range(len(df_filtered))] + ["#000000" if i % 2 == 0 else "#FFFFFF" for i in range(len(sunburst) - len(df_filtered))]
 
     sunburst['pattern_shape_sequence'] = ["/" if color == "#000" else "\\" for color in sunburst['colors']]
     sunburst['bgcolor'] = ["#333" if color == "#000" else "#EEE" for color in sunburst['colors']]
