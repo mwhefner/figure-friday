@@ -423,7 +423,10 @@ layout = html.Div(dbc.Container([
     
     # The toggle for the offcanvas panel
     dbc.Button(
-        "Top 100 Games on Steam",
+        [
+            html.I(className="fa-solid fa-bars me-2"),
+            "Top 100 Games on Steam",
+        ],
         id="open-offcanvas",
         n_clicks=0,
         style={
@@ -439,7 +442,7 @@ layout = html.Div(dbc.Container([
         controls,
         id="offcanvas",
         title="Top 100 Games on Steam",
-        is_open=False,
+        is_open=True,
         className="dbc"
     ),
 
